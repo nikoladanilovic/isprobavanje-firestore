@@ -33,7 +33,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edit_text_description"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="Save"
+        android:text="Add"
         />
 
     <Button
@@ -46,45 +46,19 @@
         android:text="Load"
         />
 
-    <Button
-        android:id="@+id/button_update"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button_load"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="Update description"
-        />
+        app:layout_constraintEnd_toEndOf="parent">
+        <TextView
+            android:id="@+id/tv_noteContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-    <Button
-        android:id="@+id/button_deleteDesc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_update"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="Delete description"
-        />
-
-    <Button
-        android:id="@+id/button_deleteNote"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_deleteDesc"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="Delete note"
-        />
-
-    <TextView
-        android:id="@+id/tv_noteContent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_deleteNote"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"
-        />
-
+            android:layout_marginTop="20dp"
+            />
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
